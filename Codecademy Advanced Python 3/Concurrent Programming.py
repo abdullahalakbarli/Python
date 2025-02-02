@@ -1,3 +1,26 @@
+"""
+📌 Kısa Açıklamalar: Concurrent Programming in Python
+
+1️⃣ **Thread (İş Parçacığı):**  
+   - Aynı süreç (process) içinde çalışan, bağımsız yürütülebilen en küçük işlem birimidir.
+   - `threading` modülü ile oluşturulur ve özellikle I/O-bound işlemler için uygundur.  
+
+2️⃣ Multiple Threads (Çoklu İş Parçacıkları): 
+   - Aynı anda birden fazla thread çalıştırarak işleri eşzamanlı (concurrent) yürütmeyi sağlar.
+   - Paralellik (gerçek eşzamanlılık) sağlamaz, ancak işlemleri hızlandırabilir.  
+
+3️⃣ Async/Await (Asenkron Programlama):
+   - `asyncio` modülü ile kullanılır, tek bir thread içinde çok sayıda işlemi eşzamanlı çalıştırır.
+   - Özellikle ağ istekleri (API çağrıları), dosya okuma/yazma ve veritabanı sorguları gibi I/O-bound işlemler için en verimli çözümdür.
+
+4️⃣ Process (Süreç):
+   - İşletim sistemi tarafından bağımsız olarak çalıştırılan bir program örneğidir. 
+   - `multiprocessing` modülü ile oluşturulabilir ve CPU-bound (yoğun işlem gücü gerektiren) işlemler için idealdir, çünkü GIL sınırlamasını aşar.
+
+🚀 Özet:  
+✔ I/O bound işlemler için:** Threading veya Async/Await kullanılır.  
+✔ CPU bound işlemler için: Multiprocessing kullanılır."""
+
 import time
 import threading
 import asyncio
